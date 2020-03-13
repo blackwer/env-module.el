@@ -29,7 +29,7 @@
   "Call 'module' command with associated options."
   (setq args (eshell-flatten-and-stringify args))
 
-  (let ((cmd (concat "/usr/bin/tclsh /cm/local/apps/environment-modules/4.2.1/libexec/modulecmd.tcl lisp " args)))
+  (let ((cmd (concat "/usr/bin/tclsh " (getenv "MODULES_CMD") " lisp " args)))
     (message cmd)
     (let ((cmd-output (shell-command-to-string cmd)))
       (env-module-eval-string cmd-output)
