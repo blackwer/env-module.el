@@ -35,3 +35,8 @@
       (env-module-eval-string cmd-output)
       (env-module-print cmd-output)
       )))
+
+(defun eshell/module (&rest args)
+  (env-module args))
+
+(provide 'env-module)
