@@ -10,7 +10,11 @@ environment, but new shells will inherit the new environment.
 To use, add the path to `env-module.el` to your load path and `(require 'env-module)` in your
 `init.el` file.
 
-There are two modes of use. When using `eshell`, just use the `module` command directly as you
-would in a normal shell (with unfortunately no completion). You can also call `env-module`
-directly in lispy form, either via string or a list of arguments: `(env-module 'load 'gcc)` or
-`(env-module "load gcc")` should both produce the same result.
+There are three modes of use. 
+
+1. When using `eshell`, just use the `module` command directly as
+   you would in a normal shell (with unfortunately no completion).
+2. `M-x env-module` to interactive call module with subcommands.
+3. You can also call `env-module` directly in lispy form, either via string or a list of
+   arguments: `(env-module 'load 'gcc)` or `(env-module "load gcc")` should both produce the same
+   result.
