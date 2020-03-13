@@ -27,6 +27,7 @@
 
 (defun env-module (&rest args)
   "Call 'module' command with associated options."
+  (interactive "sModule arguments: ")
   (setq args (eshell-flatten-and-stringify args))
 
   (let ((cmd (concat "/usr/bin/tclsh " (getenv "MODULES_CMD") " lisp " args)))
