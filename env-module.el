@@ -8,7 +8,7 @@
 (require 'eshell)
 
 (defun env-module-eval-string (string)
-  "Evaluate a string of elisp code for side effects."
+  "Evaluate a string of elisp code, removing non-lisp lines."
   (with-temp-buffer
     (insert string)
     (beginning-of-buffer)
@@ -17,7 +17,7 @@
     ))
 
 (defun env-module-print (string)
-  "Evaluate a string of elisp code for side effects."
+  "Print anything that isn't a lisp command."
   (with-temp-buffer
     (insert string)
     (beginning-of-buffer)
