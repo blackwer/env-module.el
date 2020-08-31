@@ -22,6 +22,7 @@
     (insert string)
     (beginning-of-buffer)
     (flush-lines "^(")
+    (flush-lines "^t\n")
     (buffer-string)
     ))
 
